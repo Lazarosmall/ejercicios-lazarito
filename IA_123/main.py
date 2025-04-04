@@ -1,5 +1,5 @@
 from speech import escuchar, hablar
-from music_player import reproducir_musica
+from music_player import buscar_y_reproducir
 from info_search import buscar_informacion
 from jokes_stories import contar_chiste, contar_cuento
 
@@ -8,8 +8,11 @@ def main():
     while True:
         comando = escuchar()
         if "musica" in comando:
-            hablar("Entendido, reproduciendo música.")
-            reproducir_musica()
+         hablar("¿Qué canción quieres escuchar?")
+         nombre_cancion = escuchar()
+         hablar(f"Buscando la canción {nombre_cancion}")
+         buscar_y_reproducir(nombre_cancion)
+
         elif "buscar" in comando:
             hablar("¿Qué quieres buscar?")
             consulta = escuchar()
