@@ -3,6 +3,7 @@ import pyttsx3
 import yt_dlp
 import vlc
 import time
+#esto es lago que agrego porque quiero
 
 # Inicializar el motor de síntesis de voz
 engine = pyttsx3.init()
